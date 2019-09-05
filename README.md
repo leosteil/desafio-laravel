@@ -7,18 +7,20 @@ php artisan serve <br />
 ## Rotas:
 ### Agenda:
 GET:: api/agendas - retorna todas as agendas <br />
-GET:: api/agendas{id} - retorna uma unica agenda<br />
+GET:: api/agendas/{id} - retorna uma unica agenda<br />
+GET:: api/agendas/{id}?data_inicio=''&data_fim='' - retorna uma unica agenda com suas atividades com prazos entre as datas passadas<br />
 POST:: api/agendas - insere uma nova agenda (
 JSON exemplo:
 {
 	"nome" : "Nova agenda 2"
 }) <br>
-DELETE:: api/agendas{id} - deleta uma agenda<br />
+PUT:: api/agendas/{id} - edita uma agenda<br />
+DELETE:: api/agendas/{id} - deleta uma agenda<br />
 
 ## Rotas:
 ### Atividades:
 GET:: api/atividades - retorna todas as atividades <br />
-GET:: api/atividades{id} - retorna uma unica atividade<br />
+GET:: api/atividades/{id} - retorna uma unica atividade<br />
 POST:: api/atividades - insere uma nova atividade (
 JSON exemplo:
 {
@@ -31,7 +33,8 @@ JSON exemplo:
 	"user_id": 1,
 	"agenda_id": 3
 }) <br>
-DELETE:: api/atividades{id} - deleta uma atividade<br />
+PUT:: api/atividades/{id} - edita uma atividade<br />
+DELETE:: api/atividades/{id} - deleta uma atividade<br />
 
 ## Modelo relacional
 ![Image of Yaktocat](https://github.com/leosteil/desafio-laravel/blob/master/Screenshot_1.png) <br>
