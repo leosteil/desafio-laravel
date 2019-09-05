@@ -27,9 +27,9 @@ class AgendaRepositoryEloquent implements AgendaRepositoryInterface
         $fim = $request->get('data_inicio2');
 
         if($inicio && $fim){
-            return $this->model->with(['atividades' => function ($query) {
-                $query->where('data_inicio', '>=', $_GET['data_inicio1'])->where('data_prazo', '<=', $_GET['data_inicio2']);
-            }])->get();
+            return $this->model->with(['atividades' => function ($query) use ($id, $inicio, $fim){
+                $query->where('data_inicio', '>=', $inicio)->where('data_prazo', '<=', $fim);
+            }])->where('id', '=', $id)->get();
         }else{
             return $this->model->with('atividades')->find($id);    
         }
