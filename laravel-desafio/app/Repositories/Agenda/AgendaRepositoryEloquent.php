@@ -23,8 +23,8 @@ class AgendaRepositoryEloquent implements AgendaRepositoryInterface
     
     public function get(Request $request, $id)
     {
-        $inicio = $request->get('data_inicio1');
-        $fim = $request->get('data_inicio2');
+        $inicio = $request->get('data_inicio');
+        $fim = $request->get('data_fim');
 
         if($inicio && $fim){
             return $this->model->with(['atividades' => function ($query) use ($id, $inicio, $fim){
