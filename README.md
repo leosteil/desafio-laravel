@@ -37,3 +37,11 @@ DELETE:: api/atividades{id} - deleta uma atividade<br />
 ![Image of Yaktocat](https://github.com/leosteil/desafio-laravel/blob/master/Screenshot_1.png) <br>
 A partir da descrição do problema criei este modelo relacional para representar as entidades da API. Além destas tabelas, é feito o uso da tabela users, criada automaticamente pelo laravel.
 Cada Agenda possui N Atividades e cada Atividade pertence a uma Agenda.<br>
+
+Para criar um usuário poderão ser utilizados os seguintes comando:<br>
+php artisan tinker<br>
+$user = new User<br>
+$user->name = "Leonardo"<br>
+$user->email = "john.doe@foo.bar"<br>
+$user->email = "1111456"<br>
+$user->save()<br>
