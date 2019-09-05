@@ -36,4 +36,4 @@ DELETE:: api/atividades{id} - deleta uma atividade<br />
 ## Modelo relacional
 ![Image of Yaktocat](https://github.com/leosteil/desafio-laravel/blob/master/Screenshot_1.png) <br>
 A partir da descrição do problema criei este modelo relacional para representar as entidades da API. Além destas tabelas, é feito o uso da tabela users, criada automaticamente pelo laravel.
-Cada Agenda possui N Ativadede e cada Atividade pertence a uma agenda.<br>
+Cada Agenda possui N Atividades e cada Atividade pertence a uma Agenda.<br>
